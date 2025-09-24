@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "export": "next export",
-    "deploy": "next build && next export"
+    "deploy": "next build --turbopack"
   },
   "dependencies": {
     "next": "15.5.4",
