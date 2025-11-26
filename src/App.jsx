@@ -9,14 +9,24 @@ function App() {
 
     return (
 
-        <BrowserRouter>
+        <BrowserRouter basename="/Portfolio">
             <header>
-                <nav>
+                <div className="logo"></div>
+
+                <nav className="nav-links">
                     <Link to="/">Home</Link>
                     <Link to="/aboutme">Über mich</Link>
                     <Link to="/projects">Projekte</Link>
                     <Link to="/contact">Kontakt</Link>
                 </nav>
+
+                <div className="burger" onClick={() => {
+                    document.querySelector(".nav-links").classList.toggle("active");
+                }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
 
             <main>

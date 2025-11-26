@@ -2,6 +2,7 @@ import SnakeImg from "../pictures/Snake.png"
 import SlotImg from "../pictures/Slot_Machine.png"
 import BlackjackImg from "../pictures/Blackjack.png"
 import TictacttoeImg from "../pictures/Tictactoe_extended.png"
+import Tictactoe_normal from "../pictures/Tictactoe_normal.png"
 
 export default function Projects() {
     return (
@@ -38,13 +39,24 @@ export default function Projects() {
                 </div>
 
                 <div className="project">
+                    <img src={Tictactoe_normal} alt="Foto vom Tictactoe Spiel"/>
+                    <div className="text-box">
+                        <h2>Tictactoe</h2>
+                        <span>In diesem Projekt habe ich ein normales Tictactoe in react gemacht</span>
+                        <a href="https://github.com/Seeby24/TicTacToe_extended"> Link zu Repo</a>
+                    </div>
+                </div>
+
+                <div className="project">
                     <img src={TictacttoeImg} alt="Foto vom Tictactoe Spiel"/>
                     <div className="text-box">
-                        <h2>Snake Spiel</h2>
+                        <h2>Tictactoe</h2>
                         <span>In diesem Projekt habe ich ein erweitertes Tictactoe mit React gemacht</span>
                         <a href="https://github.com/Seeby24/TicTacToe_extended"> Link zu Repo</a>
                     </div>
                 </div>
+
+
             </div>
         </>
     )
