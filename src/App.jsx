@@ -6,18 +6,20 @@ import './Layout.css'
 import Home from "./Home/Home.jsx";
 
 function App() {
+    function closeBurger() {
+        const nav = document.querySelector(".nav-links");
+        nav.classList.remove("active");
+    }
 
     return (
 
         <BrowserRouter basename="/Portfolio">
             <header>
-                <div className="logo"></div>
-
                 <nav className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/aboutme">Über mich</Link>
-                    <Link to="/projects">Projekte</Link>
-                    <Link to="/contact">Kontakt</Link>
+                    <Link to="/" onClick={closeBurger}>Home</Link>
+                    <Link to="/aboutme" onClick={closeBurger}>Über mich</Link>
+                    <Link to="/projects" onClick={closeBurger}>Projekte</Link>
+                    <Link to="/contact" onClick={closeBurger}>Kontakt</Link>
                 </nav>
 
                 <div className="burger" onClick={() => {

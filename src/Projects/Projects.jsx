@@ -8,9 +8,10 @@ export default function Projects() {
     return (
         <>
             <h1>Projekte</h1>
+            <p>Hier sieht man alle meine Projekte. Momentan habe ich nur React-Projekte
+                aber ich werde noch andere Sprachen ausprobieren.
+            </p>
             <div className="projects">
-                <p>Hier sieht man alle meine Projekte. Momentan habe ich nur React-Projekte
-                    aber ich werde noch andere Sprachen ausprobieren. </p>
                 <div className="project">
                     <img src={SnakeImg} alt="Foto vom Snake Spiel"/>
                     <div className="text-box">
@@ -50,7 +51,7 @@ export default function Projects() {
                 <div className="project">
                     <img src={TictacttoeImg} alt="Foto vom Tictactoe Spiel"/>
                     <div className="text-box">
-                        <h2>Tictactoe</h2>
+                        <h2>Tictactoe Erweitert</h2>
                         <span>In diesem Projekt habe ich ein erweitertes Tictactoe mit React gemacht</span>
                         <a href="https://github.com/Seeby24/TicTacToe_extended"> Link zu Repo</a>
                     </div>
