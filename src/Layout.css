@@ -221,3 +221,24 @@ contact span {
     background-color: var(--a_color);
     color: var(--background-color);
 }
+
+
+.technologies {
+    padding: 1rem 2rem;
+}
+
+.technologies h2 {
+    font-size: 2rem;
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.technology-list span {
+    border: 2px solid var(--a_color);
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+}
