@@ -1,69 +1,76 @@
 :root {
     --text-color: #e5e7eb;
     --background-color: #101828;
-    --a_color: #ffff;
+    --a-color: #ffffff;
 }
 
-/* Darkmode */
+/* Light Mode */
 @media (prefers-color-scheme: light) {
     :root {
-        --text-color: #000;
+        --text-color: #000000;
         --background-color: #ffffff;
-        --a_color: #000;
+        --a-color: #000000;
     }
 }
 
 
-html, body, #root {
+/* =========================
+   Grundlayout
+========================= */
+
+html,
+body,
+#root {
     height: 100%;
     margin: 0;
     padding: 0;
+
     display: flex;
     flex-direction: column;
+
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: sans-serif;
 }
 
 main {
+    flex: 1;
     margin-top: 1rem;
     padding: 0 2rem;
-    flex: 1;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-}
 
+/* =========================
+   Header & Navigation
+========================= */
 
 header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
     padding: 1rem 2rem;
-    border-bottom: 2px solid var(--a_color);
+    border-bottom: 2px solid var(--a-color);
+
     position: relative;
 }
 
-
-
-/* Burgermenu */
 .nav-links {
     display: flex;
     gap: 1.5rem;
-    margin-left:0;
 }
 
 .nav-links a {
-    color: var(--a_color);
+    color: var(--a-color);
     text-decoration: none;
+
     padding: 0.5rem 1rem;
-    border: 2px solid var(--a_color);
+    border: 2px solid var(--a-color);
     border-radius: 1rem;
 }
 
+
+/* Burger Menu */
 
 .burger {
     display: none;
@@ -75,18 +82,23 @@ header {
 .burger span {
     width: 28px;
     height: 3px;
-    background-color: var(--a_color);
+
+    background-color: var(--a-color);
     border-radius: 3px;
 }
 
 
+/* =========================
+   Allgemeine Elemente
+========================= */
+
 h1 {
     font-size: 3.75rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 2px solid #374151;
     padding-left: 2rem;
-}
+    padding-bottom: 1.25rem;
 
+    border-bottom: 2px solid #374151;
+}
 
 p {
     font-size: 1.5rem;
@@ -94,36 +106,71 @@ p {
 }
 
 
+/* =========================
+   Home
+========================= */
+
+.home-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    padding: 1rem 2rem;
+}
+
+.home-actions a {
+    color: var(--a-color);
+    text-decoration: none;
+
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--a-color);
+    border-radius: 1rem;
+}
+
+.home-actions a:hover {
+    background-color: var(--a-color);
+    color: var(--background-color);
+}
+
+
+/* =========================
+   Projekte
+========================= */
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
     padding: 1rem 0;
 }
 
 .project {
-    border: 2px solid var(--a_color);
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border: 2px solid var(--a-color);
+    border-radius: 1rem;
+
     overflow: hidden;
 }
 
 .project img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 }
 
 .text-box {
-    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
+
+    padding: 0.5rem 1rem;
 }
 
 .text-box h2 {
-    margin: 0.5rem 0 0.3rem 0;
+    margin: 0.5rem 0 0.3rem;
 }
 
 .text-box span {
@@ -132,96 +179,15 @@ p {
 }
 
 .text-box a {
-    color: var(--a_color);
+    color: var(--a-color);
     text-decoration: none;
     font-style: oblique;
 }
 
 
-.link a {
-    color: var(--a_color);
-    font-size: 1.2rem;
-}
-
-contact span {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-}
-
-
-
-
-@media (max-width: 900px) {
-    h1 { font-size: 2.5rem; }
-    .projects { grid-template-columns: repeat(2, 1fr); }
-}
-
-
-@media (max-width: 650px) {
-
-    h1 {
-        font-size: 2rem;
-        padding-left: 1rem;
-    }
-    p {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-
-    .projects { grid-template-columns: 1fr; }
-    .project { margin-bottom: 2rem; }
-
-
-    .burger { display: flex; }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: var(--background-color);
-        padding: 2rem 0;
-        text-align: left;
-    }
-    .nav-links a {
-        padding: 1rem 0;
-        border: none;
-        margin: 0;
-        font-size: 1.3rem;
-    }
-    .nav-links.active { display: flex; }
-
-    header {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-}
-
-
-.home-actions {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    flex-wrap: wrap;
-}
-
-.home-actions a {
-    color: var(--a_color);
-    text-decoration: none;
-    border: 2px solid var(--a_color);
-    border-radius: 1rem;
-    padding: 0.7rem 1.2rem;
-}
-
-.home-actions a:hover {
-    background-color: var(--a_color);
-    color: var(--background-color);
-}
-
+/* =========================
+   Technologien
+========================= */
 
 .technologies {
     padding: 1rem 2rem;
@@ -238,7 +204,154 @@ contact span {
 }
 
 .technology-list span {
-    border: 2px solid var(--a_color);
-    border-radius: 1rem;
     padding: 0.6rem 1rem;
+
+    border: 2px solid var(--a-color);
+    border-radius: 1rem;
+}
+
+
+/* =========================
+   Kontakt
+========================= */
+
+.contact-text {
+    max-width: 900px;
+}
+
+.contact-info,
+.contact-message {
+    padding: 1rem 2rem;
+}
+
+.contact-message {
+    padding: 1rem 2rem;
+}
+
+.contact-message p {
+    padding: 1rem 0;
+}
+
+.contact-info h2,
+.contact-message h2 {
+    font-size: 1.8rem;
+}
+
+.link {
+    list-style: none;
+    padding: 0;
+}
+
+.link li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.link a {
+    color: var(--a-color);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   Smartphone
+========================= */
+
+@media (max-width: 650px) {
+
+    h1 {
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+
+    /* Projekte */
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        margin-bottom: 2rem;
+    }
+
+
+    /* Burger Menu */
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background-color: var(--background-color);
+
+        padding: 2rem 0;
+        text-align: left;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        border: none;
+        font-size: 1.3rem;
+    }
+
+    header {
+        justify-content: flex-start;
+    }
+
+
+    /* Technologien */
+
+    .technology-list {
+        gap: 0.6rem;
+    }
+
+    .technology-list span {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
 }

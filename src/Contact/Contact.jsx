@@ -2,18 +2,43 @@ export default function Contact() {
     return (
         <>
             <h1>Kontakt</h1>
-            <p className="conatct">
-                Wenn du Fragen hast, Feedback geben möchtest oder einfach mit mir
-                in Kontakt treten willst, kannst du mir jederzeit eine E-Mail schicken
-                oder mein GitHub-Profil besuchen. Ich freue mich über jede Nachricht
-                egal ob es um Projekte, Ideen oder allgemeine Anfragen geht.
-                Ich bemühe mich, alle Nachrichten so schnell wie möglich zu beantworten und melde
-                mich in der Regel innerhalb von 24 Stunden zurück.
+
+            <p className="contact-text">
+                Du hast eine Frage, Feedback zu einem meiner Projekte oder
+                möchtest einfach mit mir in Kontakt treten?
+                Dann kannst du mir gerne eine E-Mail schreiben oder mein
+                GitHub-Profil besuchen.
             </p>
+
+             <section className="contact-info">
+                <h2>Kontaktinformationen</h2>
+
+
             <ul className="link">
-                <li><strong>Email 1: </strong>sebastian.willmann@bbw.students.ch</li>
-                <li><strong>Email 2: </strong>sebastian.willman@t-online.de</li>
-                <li><strong>Github : </strong><a href="https://github.com/Seeby24">https://github.com/Seeby24</a></li>
+                <li>
+                    <strong>Email: </strong>
+                    <a href="mailto:Sebastian.willman@t-online.de">
+                        Sebastian.willman@t-online.de
+                    </a>
+                </li>
+
+                <li>
+                    <strong>Github : </strong>
+                    <a href="https://github.com/Seeby24">
+                        github.com/Seeby24
+                    </a>
+                </li>
             </ul>
+            </section>
+
+           <section className="contact-message">
+            
+                <h2>Ich freue mich auf deine Nachricht!</h2>
+
+                <p>
+                    Egal ob es um ein Projekt, eine Idee, Feedback oder eine
+                    allgemeine Frage geht – ich freue mich über deine Nachricht.
+                </p>
+            </section>
         </>)
 }
